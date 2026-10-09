@@ -1,27 +1,104 @@
 public class Patterns {
-    static void main(){
-        int n=3;
-
+    static void main() {
+        int n = 4;
+        // // Solid Square
         // for(int row=1; row<=n ; row++){
-
-        //     // for each row -> n column
-        //     for(int col=1; col<=n; col++ ){
-        //         // print star 
-        //         System.out.print("* " );
-                                                                                        
-        //     }
-        //             System.out.println();
+        // // for each row -> n column
+        // for(int col=1; col<=n; col++ ){
+        // // print star
+        // System.out.print("* " );
+        // }
+        // System.out.println();
         // }
 
-                for(int row=1; row<=n ; row++){
+        // // Solid Rectangle
+        // for (int row = 1; row <= n; row++) {
+        // // for each row -> n column
+        // for (int col = 1; col <= 5; col++) {
+        // // print star
+        // System.out.print("* ");
+        // }
+        // System.out.println();
+        // }
 
-            // for each row -> n column
-            for(int col=1; col<=5; col++ ){
-                // print star 
-                System.out.print("* " );
-                                                                                        
+        // // Right angle Triangle
+        // for (int row = 1; row <= n; row++) {
+        // for (int col = 1; col <= row; col++) {
+        // System.out.print("* ");
+        // }
+        // System.out.println();
+        // }
+
+        // //Rhombus Pattern
+        // for (int row = 1; row <= n; row++) {
+        // // for each row -> Spaces, Star print
+
+        // // Spaces
+        // for (int col = 1; col <= n - row; col++) {
+        // System.out.print(" ");
+        // }
+        // // Stars
+        // for (int col = 1; col <= n; col++) {
+        // System.out.print("* ");
+        // }
+        // // move to next line
+        // System.out.println();
+        // }
+
+        // // Inverted Right angle Triangle
+        // for (int row = 1; row <= n; row++) {
+        // for (int col = 1; col <= n - row + 1; col++) {
+        // System.out.print("* ");
+        // }
+        // System.out.println();
+        // }
+
+        // // Solid Pyramid Pattern
+        // for (int row = 1; row <= n; row++) {
+        // // for each row -> Spaces, Star print
+
+        // // Spaces
+        // for (int col = 1; col <= n - row; col++) {
+        // System.out.print(" ");
+        // }
+        // // Stars
+        // for (int col = 1; col <= 2*row-1; col++) {
+        // System.out.print("*");
+        // }
+        // // move to next line
+        // System.out.println();
+        // }
+
+        // // // Inverted Solid Pyramid Pattern
+        // for (int row = 1; row <= n; row++) {
+        // // for each row -> Spaces, Star print
+
+        // // Spaces
+        // for (int spc = 1; spc <=row-1; spc++) {
+        // System.out.print(" ");
+        // }
+        // // Stars
+        // for (int col = 1; col <= 2*n-2*row+1; col++) {
+        // System.out.print("*");
+        // }
+        // // move to next line
+        // System.out.println();
+        // }
+
+        // Hollow Square
+        for (int row = 1; row <= n; row++) {
+            // for each row -> 6 columns
+
+            // Stars
+            for (int col = 1; col <= 6; col++) {
+                if (row == 1 || row == n || col == 1 || col == 6) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
             }
-                    System.out.println();
+            // move to next line
+            System.out.println();
         }
 
     }
