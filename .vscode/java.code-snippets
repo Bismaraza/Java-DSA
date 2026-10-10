@@ -1,0 +1,173 @@
+{
+    "Public static main method": {
+        "scope": "java",
+        "prefix": "psvm",
+        "body": [
+            "public static void main(String[] args) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a public static main method"
+    },
+    "System.out.println": {
+        "scope": "java",
+        "prefix": [
+            "sout",
+            "syso"
+        ],
+        "body": [
+            "System.out.println($0);"
+        ],
+        "description": "Creates a System.out.println statement"
+    },
+    "System.out": {
+        "scope": "java",
+        "prefix": "sysout",
+        "body": [
+            "System.out.print($0);"
+        ],
+        "description": "Creates a System.out.print statement"
+    },
+    "For loop": {
+        "scope": "java",
+        "prefix": "fori",
+        "body": [
+            "for (int i = 0; i < ${1:count}; i++) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates an indexed for loop"
+    },
+    "Reverse for loop": {
+        "scope": "java",
+        "prefix": "forr",
+        "body": [
+            "for (int i = ${1:n - 1}; i >= 0; i--) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a reverse indexed for loop"
+    },
+    "Enhanced for loop": {
+        "scope": "java",
+        "prefix": "foreach",
+        "body": [
+            "for (${1:int} ${2:item} : ${3:array}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates an enhanced for-each loop"
+    },
+    "If statement": {
+        "scope": "java",
+        "prefix": "if",
+        "body": [
+            "if (${1:condition}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates an if statement"
+    },
+    "If else statement": {
+        "scope": "java",
+        "prefix": "ifelse",
+        "body": [
+            "if (${1:condition}) {",
+            "\t$2",
+            "} else {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates an if-else statement"
+    },
+    "While loop": {
+        "scope": "java",
+        "prefix": "while",
+        "body": [
+            "while (${1:condition}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a while loop"
+    },
+    "Do while loop": {
+        "scope": "java",
+        "prefix": "dowhile",
+        "body": [
+            "do {",
+            "\t$1",
+            "} while (${0:condition});"
+        ],
+        "description": "Creates a do-while loop"
+    },
+    "Switch statement": {
+        "scope": "java",
+        "prefix": "switch",
+        "body": [
+            "switch (${1:value}) {",
+            "\tcase ${2:option}:",
+            "\t\t$0",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\tbreak;",
+            "}"
+        ],
+        "description": "Creates a switch statement"
+    },
+    "Try catch": {
+        "scope": "java",
+        "prefix": "trycatch",
+        "body": [
+            "try {",
+            "\t$1",
+            "} catch (${2:Exception} ${3:exception}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a try-catch block"
+    },
+    "Array declaration": {
+        "scope": "java",
+        "prefix": "arr",
+        "body": [
+            "${1:int}[] ${2:array} = new ${1:int}[${3:size}];"
+        ],
+        "description": "Creates an array declaration"
+    },
+    "Array with values": {
+        "scope": "java",
+        "prefix": "arrinit",
+        "body": [
+            "${1:int}[] ${2:array} = {${3:1, 2, 3}};"
+        ],
+        "description": "Creates an initialized array"
+    },
+    "Method": {
+        "scope": "java",
+        "prefix": "method",
+        "body": [
+            "static ${1:void} ${2:methodName}(${3}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a static method"
+    },
+    "Scanner input": {
+        "scope": "java",
+        "prefix": "scan",
+        "body": [
+            "Scanner sc = new Scanner(System.in);"
+        ],
+        "description": "Creates a Scanner object"
+    },
+    "Class": {
+        "scope": "java",
+        "prefix": "class",
+        "body": [
+            "class ${1:ClassName} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a class"
+    }
+}
