@@ -1,6 +1,6 @@
 public class Patterns {
     static void main() {
-        int n = 4;
+        int n = 5;
         // // Solid Square
         // for(int row=1; row<=n ; row++){
         // // for each row -> n column
@@ -85,21 +85,63 @@ public class Patterns {
         // System.out.println();
         // }
 
-        // Hollow Square
-        for (int row = 1; row <= n; row++) {
-            // for each row -> 6 columns
+        // // Hollow Square
+        // for (int row = 1; row <= n; row++) {
+        // // for each row -> 6 columns
 
-            // Stars
-            for (int col = 1; col <= 6; col++) {
-                if (row == 1 || row == n || col == 1 || col == 6) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
-                }
+        // // Stars
+        // for (int col = 1; col <= 6; col++) {
+        // if (row == 1 || row == n || col == 1 || col == 6) {
+        // System.out.print("*");
+        // } else {
+        // System.out.print(" ");
+        // }
+        // }
+        // // move to next line
+        // System.out.println();
+        // }
+
+        // // Hollow Right Angle Triangle
+        // for (int row = 1; row <= n; row++) {
+        // // for each row -> Variable
+
+        // // Stars
+        // if (row == 1 || row == 2 || row == n) {
+        // for (int col = 1; col <= row; col++)
+        // System.out.print("* ");
+        // } else {
+        // System.out.print("* ");
+
+        // for (int col = 1; col <= (row - 2); col++) {
+        // System.out.print(" ");
+
+        // System.out.print("* ");
+        // }
+        // }
+        // // move to next line
+        // System.out.println();
+        // }
+
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= 2 * (n - row); col++) {
+                System.out.print(" ");
             }
-            // move to next line
+
+            if (row == 1 || row == n) {
+                for (int col = 1; col <= 2 * row - 1; col++) {
+                    System.out.print("* ");
+                }
+            } else {
+                System.out.print("* ");
+
+                for (int col = 1; col <= 2 * row - 3; col++) {
+                    System.out.print("  ");
+                }
+
+                System.out.print("* ");
+            }
+
             System.out.println();
         }
-
     }
 }
